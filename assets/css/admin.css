@@ -1,0 +1,196 @@
+/* assets/css/admin.css - Management & Dashboard Styling */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--surface-dark);
+    color: var(--text-on-dark);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-right: 1px solid #2B332C;
+}
+
+.sidebar-brand {
+    padding: 1.5rem;
+    border-bottom: 1px solid #2B332C;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sidebar-nav {
+    padding: 1.5rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    list-style: none;
+    flex: 1;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    color: #A2A9A0;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: all 0.15s ease;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    color: #FFFFFF;
+    background-color: #242E26;
+}
+
+.sidebar-link.active {
+    background-color: var(--accent);
+    color: #FFFFFF;
+}
+
+.sidebar-footer {
+    padding: 1.25rem;
+    border-top: 1px solid #2B332C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+.admin-topbar {
+    background-color: var(--surface-main);
+    border-bottom: 1px solid var(--divider);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.admin-content {
+    padding: 2.25rem;
+    flex: 1;
+}
+
+.page-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stats-grid-admin {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.stat-box {
+    background-color: var(--surface-main);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+.stat-box-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-box-value {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-active, .status-completed, .status-verified, .status-open {
+    background-color: #EDF7EE;
+    color: #135223;
+}
+
+.status-pending, .status-submitted, .status-reviewed {
+    background-color: #FFFBEB;
+    color: #92400E;
+}
+
+.status-failed, .status-rejected, .status-closed, .status-suspended {
+    background-color: #FDF2F2;
+    color: #9B1C1C;
+}
+
+/* Chat Desk Layout */
+.chat-desk-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+    background-color: var(--surface-main);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    height: 650px;
+    overflow: hidden;
+}
+
+.conv-list {
+    border-right: 1px solid var(--divider);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.conv-item {
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--divider);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.conv-item:hover, .conv-item.active {
+    background-color: var(--surface-subtle);
+}
+
+.conv-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.conv-preview {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
